@@ -1,0 +1,17 @@
+<h1>Listes des voitures</h1>
+<table border="1">
+    <tr>
+        <td>Serie</td>
+        <td>Date Mise en Marche</td>
+        <td>Modele</td>
+        <td>Prix par jour</td>
+    </tr>
+    {%  for v in listeVoiture %}
+    <tr>
+        <td>{{ v.serie }}</td>
+        <td>{{ v.dateMiseEnMarche | date('Y-m-d') }}</td>
+        <td>{{ v.modele }}</td>
+        <td>{{ v.prixJour }}</td>
+    </tr>
+    {% endfor %}
+</table>
